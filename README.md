@@ -1,4 +1,4 @@
-# AED (Automatic Extrenal Defibrilator) Data Collection - Sledilnik.org
+# AED (Automatic External Defibrilator) Data Collection - Sledilnik.org
 
 [![Update](https://github.com/sledilnik/aed-data/actions/workflows/update.yml/badge.svg)](https://github.com/sledilnik/aed-data/actions/workflows/update.yml)
 

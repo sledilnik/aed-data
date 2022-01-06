@@ -26,4 +26,4 @@ In this folder run:
 
 ## Updating data
 
-Most GitHub:octocat: workflows are scheduled to be ran periodically and can also be triggered manually on the [Actions](https://github.com/sledilnik/data/actions) page.
+GitHub:octocat: workflows are scheduled to be ran periodically and can also be triggered manually on the [Actions](https://github.com/sledilnik/aed-data/actions) page.

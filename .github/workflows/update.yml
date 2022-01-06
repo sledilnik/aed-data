@@ -3,7 +3,7 @@
 name: AED update
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# events but only for the main branch
 on:
   push:
     branches: [ main ]
@@ -68,11 +68,11 @@ jobs:
 
     # Git commit + push, see https://github.com/github-actions-x/commit
     - name: Publish changes to git
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/main'
       uses: github-actions-x/commit@v2.8
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        push-branch: 'master'
+        push-branch: 'main'
         commit-message: 'AED Data update 🤖'
         rebase: 'true' # pull and rebase before commit
         files: sources/*

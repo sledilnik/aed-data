@@ -12,7 +12,8 @@ Overpass query for Slovenia: https://overpass-turbo.eu/s/1eNQ
 
 ### Portal OPSI (Odprti Podatki Slovenije)
 
-https://podatki.gov.si/data/search?s=defibrilatorjev
+* [API](https://podatki.gov.si/api/view/store/apis/info?name=OPSI_osnovni&version=2.2.3&provider=admin)
+* https://podatki.gov.si/data/search?s=defibrilator
 
 ## How to run scripts
 

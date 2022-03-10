@@ -74,7 +74,7 @@ def import_openstreetmap():
         os.makedirs("sources/openstreetmap.org")
 
     # saveFromOverpassAPI(overpass_query_aed_json, "sources/openstreetmap.org/openstreetmap.json", "application/json")
-    saveFromOverpassAPI(overpass_query_aed_csv, "sources/openstreetmap.org/openstreetmap.csv", "text/csv")
+    saveFromOverpassAPI(overpass_query_aed_csv, "sources/openstreetmap.org/slovenia.csv", "text/csv")
 
 
 def import_opsi():

@@ -4,6 +4,7 @@ from datetime import date
 # from numpy import int64, inf, nan
 # from pandas.core.indexes.base import Index 
 import requests
+import os
 # import pandas as pd
 
 def saveurl(url, filename, expectedContentType):
@@ -19,9 +20,61 @@ def saveurl(url, filename, expectedContentType):
     else:
         raise Exception("Unexpected content-type:", actualContentType)
 
+
+overpass_api_url = "https://lz4.overpass-api.de/api/interpreter"
+overpass_query_aed_json = """
+[out:json]
+[timeout:300];
+area(id:3600218657)->.slovenia;
+(
+    nwr[emergency=defibrillator](area.slovenia);
+);
+out center body qt;
+"""
+
+#https://overpass-turbo.eu/s/1eNQ
+overpass_query_aed_csv = """
+[out:csv(
+     ::"id", ::type, ::lat, ::lon, name,
+     phone, "emergency:phone", image, website, description, operator, 
+     opening_hours, indoor, access, wheelchair,
+     "defibrillator:location", "defibrillator:location:en", "defibrillator:location:sl", "defibrillator:location:it", "defibrillator:location:hu", "defibrillator:location:de";
+     true; ","
+   )]
+[timeout:300];
+area(id:3600218657)->.slovenia;
+(
+    nwr[emergency=defibrillator](area.slovenia);
+);
+out center body qt;
+"""
+
+def saveFromOverpassAPI(
+    query: str,
+    filename: str, 
+    expectedContentType: str,
+    api_url: str = overpass_api_url,
+):
+    print(f"Requesting data from Overpass API. [url={api_url}]")
+    response = requests.post(url=api_url, data={"data": query})
+    response.raise_for_status()
+    print("Downloaded data from Overpass API.")
+
+    actualContentType = response.headers['Content-Type']
+    if actualContentType == expectedContentType:
+        if filename != None:
+            open(filename, 'wb').write(response.content)
+            print("Saved", filename)
+    else:
+        raise Exception("Unexpected content-type:", actualContentType)
+
+
 def import_openstreetmap():
-    # https://overpass-turbo.eu/s/1eNQ
-    print('TODO: scrape overpass')
+    if not os.path.exists("sources/openstreetmap.org"):
+        os.makedirs("sources/openstreetmap.org")
+
+    # saveFromOverpassAPI(overpass_query_aed_json, "sources/openstreetmap.org/openstreetmap.json", "application/json")
+    saveFromOverpassAPI(overpass_query_aed_csv, "sources/openstreetmap.org/openstreetmap.csv", "text/csv")
 
 
 def import_opsi():

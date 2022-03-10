@@ -6,7 +6,7 @@
 
 ### OpenStreetMap
 
-In OSM nodes are tagged with [`emergency=defibrilator`](https://wiki.openstreetmap.org/wiki/Tag:emergency%3Ddefibrillator)
+In OSM nodes are tagged with [`emergency=defibrillator`](https://wiki.openstreetmap.org/wiki/Tag:emergency%3Ddefibrillator)
 
 Overpass query for Slovenia: https://overpass-turbo.eu/s/1eNQ
 

@@ -43,6 +43,7 @@ jobs:
 
     - name: Cache pip
       uses: actions/cache@v2.1.7
+      id: pipcache
       with:
         # This path is specific to Ubuntu
         path: ~/.cache/pip
@@ -53,6 +54,7 @@ jobs:
           ${{ runner.os }}-
 
     - name: Install python dependencies
+      if: steps.pipcache.outputs.cache-hit != 'true'
       run: pip install -U -r requirements.txt
 
     - name: "Run update.py"

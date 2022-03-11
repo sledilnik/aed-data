@@ -1,11 +1,8 @@
 #!/usr/bin/env python
+
 import time
-from datetime import date
-# from numpy import int64, inf, nan
-# from pandas.core.indexes.base import Index 
 import requests
 import os
-# import pandas as pd
 
 def saveurl(url, filename, expectedContentType):
     print("Downloading ", url)

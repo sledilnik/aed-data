@@ -4,16 +4,12 @@
 
 ## Sources
 
-### OpenStreetMap
-
-In OSM nodes are tagged with [`emergency=defibrillator`](https://wiki.openstreetmap.org/wiki/Tag:emergency%3Ddefibrillator)
-
-Overpass query for Slovenia: https://overpass-turbo.eu/s/1eNQ
-
-### Portal OPSI (Odprti Podatki Slovenije)
-
-* [API](https://podatki.gov.si/api/view/store/apis/info?name=OPSI_osnovni&version=2.2.3&provider=admin)
-* https://podatki.gov.si/data/search?s=defibrilator
+| Status             | Source                                                              | License                                         | Credit                      | Local data                                                               | Links                                                                                                                                                              |
+|--------------------|---------------------------------------------------------------------|-------------------------------------------------|-----------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :white_check_mark: | [OpenStreetMap](https://openstreetmap.org)                          | [ODbL](https://www.openstreetmap.org/copyright) | ©OpenStreetMap contributors | [openstreetmap.org/slovenia.csv](sources/openstreetmap.org/slovenia.csv) | [`emergency=defibrillator`](https://wiki.openstreetmap.org/wiki/Tag:emergency%3Ddefibrillator), [Overpass API](https://overpass-turbo.eu/s/1eNQ)                   |
+| :x:                | [Dispečerska služba zdravstva](https://www.dsz.si/index.php/sl/aed) | ?                                               |                             |                                                                          |                                                                                                                                                                    |
+| :x:                | [AED baza Slovenije](https://aed-baza.si/)                          | ?                                               |                             |                                                                          |                                                                                                                                                                    |
+| :x:                | [Portal OPSI (Odprti Podatki Slovenije)](https://podatki.gov.si)    | various                                         | Various municipalities      | [podatki.gov.si](sources/podatki.gov.si/)                                | [API](https://podatki.gov.si/api/view/store/apis/info?name=OPSI_osnovni&version=2.2.3&provider=admin), [search](https://podatki.gov.si/data/search?s=defibrilator) |
 
 ## How to run scripts
 

@@ -12,6 +12,11 @@
 | :x:                | [Portal OPSI (Odprti Podatki Slovenije)](https://podatki.gov.si)    | various                                         | Various municipalities      | [podatki.gov.si](sources/podatki.gov.si/)                                | [API](https://podatki.gov.si/api/view/store/apis/info?name=OPSI_osnovni&version=2.2.3&provider=admin), [search](https://podatki.gov.si/data/search?s=defibrilator) |
 | :x:                | [Sebastian Pleško](https://plesko.si/aed/)                          | ?                                               | ?individual contributors    | [plesko.si](sources/plesko.si/)                                          | [CSV](https://plesko.si/aed/db.csv)                                                                                                                                |
 
+## Add / edit data in OpenStreetMap:
+
+* https://openaedmap.org/#map=9/46.022/14.624
+* https://mapcomplete.osm.be/aed.html?lat=46.0525&lon=14.52289&language=sl - with pictures
+
 ## How to run scripts
 
 ___

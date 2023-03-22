@@ -18,7 +18,7 @@ def saveurl(url, filename, expectedContentType):
         raise Exception("Unexpected content-type:", actualContentType)
 
 
-overpass_api_url = "https://lz4.overpass-api.de/api/interpreter"
+overpass_api_url = "https://overpass-api.de/api/interpreter"
 overpass_query_aed_json = """
 [out:json]
 [timeout:300];

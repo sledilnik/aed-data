@@ -478,6 +478,8 @@ Zunaj - Levo od glavnega vhoda v stanovanjski bloka",,,no,,,,,,,,
 12199091501,node,46.1434779,15.2752929,,+38641 802 739,,,,,,,no,yes,,,,"LAHOMNO
 P'r Bobek- Planko,
 Lahomno 64",,,
+12215942501,node,46.1296696,15.2874433,,,,,,,,,no,yes,,,,"Gasilski dom,
+Vrh nad Laškim 9",,,
 12194080555,node,45.9576834,15.3544574,,,,,,,,24/7,no,yes,,,,,,,
 12193966372,node,46.0061647,15.3151810,,,,,,,,,no,yes,limited,,By the tourist office,,,,
 12199120702,node,46.0919508,15.3365045,,,,,,,,,no,yes,,,,"JURKLOŠTER 
@@ -488,6 +490,12 @@ Jurklošter 21",,,
 8844707933,node,45.8981977,15.6556363,,,,,,,,,yes,permissive,,"inside, during office hours",,,,,
 11329471246,node,46.0405598,15.5904278,,,,,,,,,,,,,,,,,
 5841503485,node,46.1500976,15.5630836,,,,,,,,,,,,,,,,,
+12215942502,node,46.1644924,15.2304859,,,,,,,,,no,yes,,,,"dvorana Tri lilije,
+Poženelova 22
+Rok REMIC",,,
+12215948101,node,46.1541682,15.2353231,,,,,,,,,no,yes,,,,"LAŠKO – TIC 
+Laško – Hotel Savinja,
+Valvasorjev trg 1",,,
 8914277995,node,46.2119528,15.2631221,,,,,,,,24/7,no,yes,,,,,,,
 11166946773,node,46.3371023,15.1195642,,,,,,,,,no,yes,,,,,,,
 12199120901,node,46.1672267,15.3494666,,,,,,,,,no,yes,,,,"ŠENTRUPERT

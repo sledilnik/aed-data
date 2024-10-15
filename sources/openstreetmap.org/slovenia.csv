@@ -1,6 +1,7 @@
 @id,@type,@lat,@lon,name,phone,emergency:phone,image,website,description,operator,opening_hours,indoor,access,wheelchair,defibrillator:location,defibrillator:location:en,defibrillator:location:sl,defibrillator:location:it,defibrillator:location:hu,defibrillator:location:de
 11809780252,node,45.5223098,13.5666796,,,,,,,,24/7,no,yes,,,,,,,
 8806561917,node,45.4755445,13.6187154,,,,,,,,,no,yes,,,,,,,
+12253298723,node,45.5081934,13.5965146,,,112,,,,,24/7,no,,,At the entrance,,,,,"Am Eingang, draußen"
 8791941155,node,45.5199923,13.5812990,,,,,,,,,no,yes,,,,,,,
 11809740932,node,45.5136877,13.5941198,,,,https://i.imgur.com/JWeqgBa.jpeg,,,,24/7,no,yes,limited,,by the tourist info,,,,
 7674418816,node,45.4885220,13.6566094,,,,,,,,,no,yes,yes,"on the wall, outside",,,,,

@@ -338,7 +338,7 @@ Not available publicly
 Not available all year round",Univerzitetni klinični center Ljubljana,,yes,,,,,,,,
 8978482744,node,46.0647570,14.5131066,,,,,,,,,no,permissive,yes,"outside, on the wall",,,,,
 8978482745,node,46.0644899,14.5137766,,,,,,,,,yes,permissive,,inside,,,,,
-6498381285,node,46.0713632,14.5184477,,,,,,,,,,,,,,,,,
+6498381285,node,46.0713632,14.5184477,,,,,,,,,yes,,,,,,,,
 9663554003,node,46.0799186,14.4811631,,,,,,,,,no,yes,,"outside, on the wall",,,,,
 10789435481,node,46.0779225,14.4832273,,,,,,,,,yes,,,In buffer zone between outer and inner doors at top level toward playgrounds,,,,,
 7977708107,node,46.0796926,14.5011136,,,,,,,,,no,yes,yes,"outside, by the entrance on the wall",,,,,

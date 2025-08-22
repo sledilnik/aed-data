@@ -59,7 +59,7 @@
 6835464165,node,45.7064606,13.8676914,AED Sežana - Elektro Primorska,,,,,,,Mo-Fr 07:00-15:00,yes,,,,,,,,
 6835548579,node,45.7051615,13.8692002,AED Sežana - ZŠTIP Sežana – nogometni stadion,,,,,,,24/7,no,,,,,,,,
 6835609732,node,45.7019195,13.8714644,AED Sežana - ZGRS Sežana,,,,,,,,yes,,,,,,,,
-7728291786,node,45.7036488,13.8715171,AED Sežana - Kraški vodovod,,,,,,,24/7,,,,,,,,,
+7728291786,node,45.7036488,13.8715171,AED Sežana - Kraški vodovod,,,,,,,24/7,no,yes,,,,,Sulla recinzione vicino al cancello.,,
 12061109965,node,45.7021313,13.8720150,AED Sežana - ICZR Sežana pri vratarju,,,,,,,24/7,,,,"izobraževalni center za zaščito in reševanje Sežana, pri vratarju",,,,,
 13087089896,node,45.7051046,13.8687621,AED Sežana - OŠ Sežana – športna hala,,,,,,,24/7,,,,,,,,,
 13087089897,node,45.6991825,13.8837309,AED Sežana - Tenis igrišča,,,,,,,24/7,,,,,,,,,
@@ -93,6 +93,9 @@
 11792856523,node,45.8130671,13.6222616,,,,,,,,,no,yes,,External case.,,,,,
 5012358271,node,45.8520370,13.5823707,,,,,,,,,no,,,Pod stopnicami,,,,,
 6061308751,node,45.8865613,13.6021556,,,,,,,,,no,yes,,Pod streho Kampo bar.,,,,,
+13087434431,node,45.8724955,13.6162332,,,,,,,,,no,yes,,"Na elektro omarici – vzhodna stran objekta
+On the electrical box - east side of the building
+Sulla scatola elettrica - lato est dell'edificio",,,,,
 7994438941,node,45.8875058,13.6090891,,,,,,,,,no,,,,,,,,
 12160400407,node,45.8904434,13.6060389,,,,,,,,,no,yes,,Desno na vhodu,,,,,
 6003355340,node,45.8913211,13.6128134,,,,,,,,,no,,,Na zidu.,,,,,
@@ -110,7 +113,7 @@ On the wall of the house above the hydrant.",,,,,
 11076777992,node,45.7560711,13.8326500,,,,,,,,,,yes,,"Entrata della banca
 Vhod banke
 Bank entrance",,,,,
-13087089893,node,45.7560833,13.8319092,AED Dutovlje - Bunčetova domačija,,,,,,,24/7,,,,,,,,,
+13087089893,node,45.7560833,13.8319092,AED Dutovlje - Bunčetova domačija,,,,,,,24/7,no,yes,,,,,,,
 13087089892,node,45.7645058,13.8290251,AED Dutovlje - Dom na Krasu,,,,,,,24/7,,,,,,,,,
 12061492400,node,45.8170792,13.7729519,,,,,,,,,no,yes,,,,,,,
 10948593868,node,45.8265160,13.7711794,,,,,,,,,yes,yes,,,,,,,

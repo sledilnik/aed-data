@@ -1,4 +1,5 @@
 @id,@type,@lat,@lon,name,phone,emergency:phone,image,website,description,operator,opening_hours,indoor,access,wheelchair,defibrillator:location,defibrillator:location:en,defibrillator:location:sl,defibrillator:location:it,defibrillator:location:hu,defibrillator:location:de
+13382096333,node,45.5161504,13.5776606,,,,,,,,,no,,,Behind the door of the fence on the wall,,,,,
 11809780252,node,45.5223098,13.5666796,,,,,,,,24/7,no,yes,,,,,,,
 8806561917,node,45.4755445,13.6187154,,,,,,,,,no,yes,,,,,,,
 12253298723,node,45.5081934,13.5965146,,,112,,,,,24/7,no,,,At the entrance,,,,,"Am Eingang, draußen"

@@ -19,6 +19,11 @@ def saveurl(url, filename, expectedContentType):
 
 
 overpass_api_url = "https://overpass-api.de/api/interpreter"
+overpass_headers = {
+    "User-Agent": "aed-data-updater/1.0 (+https://github.com/sledilnik/aed-data)",
+    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+}
+
 overpass_query_aed_json = """
 [out:json]
 [timeout:300];
@@ -53,7 +58,15 @@ def saveFromOverpassAPI(
     api_url: str = overpass_api_url,
 ):
     print(f"Requesting data from Overpass API. [url={api_url}]")
-    response = requests.post(url=api_url, data={"data": query})
+    request_headers = {
+        **overpass_headers,
+        "Accept": expectedContentType,
+    }
+    response = requests.post(
+        url=api_url,
+        data={"data": query},
+        headers=request_headers,
+    )
     response.raise_for_status()
     print("Downloaded data from Overpass API.")
 

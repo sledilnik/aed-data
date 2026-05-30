@@ -70,7 +70,7 @@ def saveFromOverpassAPI(
     response.raise_for_status()
     print("Downloaded data from Overpass API.")
 
-    actualContentType = response.headers['Content-Type']
+    actualContentType = response.headers['Content-Type'].split(';')[0].strip()
     if actualContentType == expectedContentType:
         if filename != None:
             open(filename, 'wb').write(response.content)

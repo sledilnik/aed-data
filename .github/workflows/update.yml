@@ -19,7 +19,7 @@ on:
     - 'requirements.txt'
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '25 */6 * * *'
+    - cron:  '25 3 * * *'
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel

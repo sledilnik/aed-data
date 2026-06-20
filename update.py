@@ -2,11 +2,30 @@
 
 import time
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 import os
+
+REQUEST_TIMEOUT = 120  # seconds
+
+def create_session_with_retries(retries=3, backoff_factor=2, status_forcelist=(429, 500, 502, 503, 504)):
+    """Create a requests session with retry/backoff for transient failures."""
+    session = requests.Session()
+    retry_strategy = Retry(
+        total=retries,
+        backoff_factor=backoff_factor,
+        status_forcelist=status_forcelist,
+        allowed_methods=["GET", "POST"],
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    return session
 
 def saveurl(url, filename, expectedContentType):
     print("Downloading ", url)
-    r = requests.get(url, allow_redirects=True)
+    session = create_session_with_retries()
+    r = session.get(url, allow_redirects=True, timeout=REQUEST_TIMEOUT)
     r.raise_for_status()
 
     actualContentType = r.headers['Content-Type']
@@ -58,14 +77,16 @@ def saveFromOverpassAPI(
     api_url: str = overpass_api_url,
 ):
     print(f"Requesting data from Overpass API. [url={api_url}]")
+    session = create_session_with_retries(retries=3, backoff_factor=10)
     request_headers = {
         **overpass_headers,
         "Accept": expectedContentType,
     }
-    response = requests.post(
+    response = session.post(
         url=api_url,
         data={"data": query},
         headers=request_headers,
+        timeout=REQUEST_TIMEOUT,
     )
     response.raise_for_status()
     print("Downloaded data from Overpass API.")

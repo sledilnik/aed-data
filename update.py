@@ -83,7 +83,7 @@ def saveFromOverpassAPI(
     api_url: str = overpass_api_url,
 ):
     print(f"Requesting data from Overpass API. [url={api_url}]")
-    session = create_session_with_retries(retries=3, backoff_factor=10)
+    session = create_session_with_retries(retries=3, backoff_factor=10, allowed_methods=("POST",))
     request_headers = {
         **overpass_headers,
         "Accept": expectedContentType,

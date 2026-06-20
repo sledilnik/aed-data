@@ -8,14 +8,20 @@ import os
 
 REQUEST_TIMEOUT = 120  # seconds
 
-def create_session_with_retries(retries=3, backoff_factor=2, status_forcelist=(429, 500, 502, 503, 504)):
+def create_session_with_retries(
+    retries=3,
+    backoff_factor=2,
+    status_forcelist=(429, 500, 502, 503, 504),
+    allowed_methods=("GET", "HEAD", "OPTIONS"),
+):
     """Create a requests session with retry/backoff for transient failures."""
     session = requests.Session()
     retry_strategy = Retry(
         total=retries,
         backoff_factor=backoff_factor,
         status_forcelist=status_forcelist,
-        allowed_methods=["GET", "POST"],
+        allowed_methods=allowed_methods,
+        raise_on_status=False,
     )
     adapter = HTTPAdapter(max_retries=retry_strategy)
     session.mount("https://", adapter)

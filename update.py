@@ -7,6 +7,7 @@ from urllib3.util.retry import Retry
 import os
 
 REQUEST_TIMEOUT = 120  # seconds
+OVERPASS_REQUEST_TIMEOUT = 360  # seconds
 
 def create_session_with_retries(
     retries=3,
@@ -92,7 +93,7 @@ def saveFromOverpassAPI(
         url=api_url,
         data={"data": query},
         headers=request_headers,
-        timeout=REQUEST_TIMEOUT,
+        timeout=OVERPASS_REQUEST_TIMEOUT,
     )
     response.raise_for_status()
     print("Downloaded data from Overpass API.")

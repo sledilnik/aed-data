@@ -31,9 +31,9 @@ def create_session_with_retries(
 
 def saveurl(url, filename, expectedContentType):
     print("Downloading ", url)
-    session = create_session_with_retries()
-    r = session.get(url, allow_redirects=True, timeout=REQUEST_TIMEOUT)
-    r.raise_for_status()
+    with create_session_with_retries() as session:
+        r = session.get(url, allow_redirects=True, timeout=REQUEST_TIMEOUT)
+        r.raise_for_status()
 
     actualContentType = r.headers['Content-Type']
 
@@ -84,18 +84,18 @@ def saveFromOverpassAPI(
     api_url: str = overpass_api_url,
 ):
     print(f"Requesting data from Overpass API. [url={api_url}]")
-    session = create_session_with_retries(retries=3, backoff_factor=10, allowed_methods=("POST",))
-    request_headers = {
-        **overpass_headers,
-        "Accept": expectedContentType,
-    }
-    response = session.post(
-        url=api_url,
-        data={"data": query},
-        headers=request_headers,
-        timeout=OVERPASS_REQUEST_TIMEOUT,
-    )
-    response.raise_for_status()
+    with create_session_with_retries(retries=3, backoff_factor=10, allowed_methods=("POST",)) as session:
+        request_headers = {
+            **overpass_headers,
+            "Accept": expectedContentType,
+        }
+        response = session.post(
+            url=api_url,
+            data={"data": query},
+            headers=request_headers,
+            timeout=OVERPASS_REQUEST_TIMEOUT,
+        )
+        response.raise_for_status()
     print("Downloaded data from Overpass API.")
 
     actualContentType = response.headers['Content-Type'].split(';')[0].strip()

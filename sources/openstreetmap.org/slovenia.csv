@@ -158,7 +158,7 @@
 12883452164,node,45.8898555,13.6702216,,,,,,,,,yes,yes,,V prvem nadstropju desno,,,,,
 5150211467,node,45.8489825,13.7037326,,,,,,,,24/7,no,yes,limited,,,,,,
 13274137569,node,45.8421048,13.7355717,Defibrillator,,,,,,,24/7,no,yes,no,,,,,,
-6008001850,node,45.8869397,13.7026507,,,,,,,,,no,yes,,Na hiši ob glavni cesti,,,,,
+6008001850,node,45.8869397,13.7026507,,,,,,,,24/7,no,yes,limited,Na hiši ob glavni cesti,,,,,
 12558660937,node,45.8867966,13.7345276,,,,,,,,24/7,no,yes,yes,,,,,,
 11150877577,node,45.8932024,13.6349573,,,,,,,,24/7,no,yes,no,,,,,,
 8986039196,node,45.8961228,13.6446654,,,,https://openaedmap.org/api/v1/photos/view/b4CVmCYAd4X4mcIlIWpUYQ.webp,,,,24/7,no,yes,yes,,,Na steni pri vogalu stavbe,,,

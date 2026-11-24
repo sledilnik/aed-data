@@ -132,4 +132,6 @@ if __name__ == "__main__":
     update_time = int(time.time())
     
     import_openstreetmap()
-    import_opsi()
+
+    # disable OPSI import for now as it is blocked from github runners
+    # import_opsi()
